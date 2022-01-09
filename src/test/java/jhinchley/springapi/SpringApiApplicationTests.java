@@ -1,10 +1,10 @@
-package com.example.springdocker;
+package jhinchley.springapi;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class SpringDockerApplicationTests {
+class SpringApiApplicationTests {
 
 	@Test
 	void contextLoads() {
