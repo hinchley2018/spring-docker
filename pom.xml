@@ -12,9 +12,9 @@
 	<artifactId>spring-docker</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>spring-docker</name>
-	<description>Demo project of spring in docker</description>
+	<description>Demo project for Spring Boot in Docker</description>
 	<properties>
-		<java.version>11</java.version>
+		<java.version>17</java.version>
 	</properties>
 	<dependencies>
 		<dependency>
