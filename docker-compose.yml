@@ -1,10 +1,28 @@
 version: '3'
 services:
+  mysqldb:
+    container_name: mysqldb
+    image: mysql:latest
+    environment:
+      - MYSQL_ROOT_PASSWORD=P@ssw0rd
+      - MYSQL_DATABASE=products
+      - MYSQL_USER=springapi
+      - MYSQL_PASSWORD=springapi_pass
+    ports:
+      - 3306:3306
+    volumes:
+      - mysqldb:/var/lib/mysql
+
   api:
     container_name: api
     image: spring-boot
+    depends_on:
+      - mysqldb
     build:
       context: ./
       dockerfile: Dockerfile
     ports:
       - 8080:8080
+
+volumes:
+  mysqldb:
