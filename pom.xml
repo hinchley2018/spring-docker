@@ -8,11 +8,11 @@
 		<version>2.6.2</version>
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
-	<groupId>com.example</groupId>
-	<artifactId>spring-docker</artifactId>
+	<groupId>jhinchley</groupId>
+	<artifactId>springapi</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>spring-docker</name>
-	<description>Demo project for Spring Boot in Docker</description>
+	<name>springapi</name>
+	<description>Demo project for Spring Boot</description>
 	<properties>
 		<java.version>17</java.version>
 	</properties>
@@ -30,6 +30,7 @@
 	</dependencies>
 
 	<build>
+		<finalName>jhinchley-springapi</finalName>
 		<plugins>
 			<plugin>
 				<groupId>org.springframework.boot</groupId>

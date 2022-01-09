@@ -1,8 +1,13 @@
-FROM openjdk:17-jre-slim
+FROM maven:3.8.3 AS maven
 
 WORKDIR /app
-COPY ./target/spring-app-0.1/SNAPSHOT.jar /app
+COPY . /app
+RUN mvn package
 
-EXPOSE 8080
+FROM openjdk:17-slim
+ARG JAR_File=jhinchley-springapi.jar
 
-CMD [ "java", "-jar", "spring-app-0.1/SNAPSHOT.jar" ]
+WORKDIR /opt/app 
+COPY --from=maven /app/target/${JAR_File} /opt/app
+
+ENTRYPOINT [ "java", "-jar", "jhinchley-springapi.jar" ]

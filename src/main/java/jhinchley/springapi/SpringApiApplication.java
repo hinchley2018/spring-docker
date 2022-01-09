@@ -15,6 +15,6 @@ public class SpringApiApplication {
 
 	@RequestMapping("/")
 	public String homeEndpoint(){
-		return "hello spring";
+		return "hello spring from a better named project";
 	}
 }
