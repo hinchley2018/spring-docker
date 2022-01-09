@@ -7,5 +7,4 @@
 
 ## getting started
 - fork/clone the project
-- `docker build -t spring-boot .`
-- `docker run -it -p 8080:8080 spring-boot`
+- build and run project `docker compose up --build`
